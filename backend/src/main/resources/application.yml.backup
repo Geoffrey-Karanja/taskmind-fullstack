@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: taskmind-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/taskmind_db
+    username: taskmind
+    password: devpass123
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop  # CHANGE THIS FROM 'validate' TO 'create-drop'
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 20
+        order_inserts: true
+        order_updates: true
+    show-sql: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+
+logging:
+  level:
+    com.taskmind: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+app:
+  cors:
+    allowed-origins: http://localhost:5173,https://taskmind-4xjxm4ssj-geoffreys-projects-adff859c.vercel.app

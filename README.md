@@ -16,7 +16,7 @@ This project represents my journey into full-stack development. Every line of co
 |-----------|-----|--------|
 | **Frontend (React)** | https://taskmind-4xjxm4ssj-geoffreys-projects-adff859c.vercel.app | ✅ Live |
 | **Backend API (Spring Boot)** | http://localhost:8080 | 🏠 Local |
-| **GitHub Repository** | https://github.com/yourusername/taskmind | 📦 Source |
+| **GitHub Repository** | https://github.com/Geoffrey-Karanja/taskmind-fullstack.git| 📦 Source |
 
 ## 🏗️ Architecture┌─────────────────┐ HTTP/REST ┌─────────────────┐ JDBC ┌─────────────────┐
 │ React Frontend │ ◄───────────────► │ Spring Boot API │ ◄────────────► │ PostgreSQL DB │
